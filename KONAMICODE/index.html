@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+    let arr =[]
+    let konWord= 'hardik'
+    function konami(e){
+        arr.push(e.key)
+   if(arr.length > konWord.length)  arr.shift()
+ if(arr.join('').includes(konWord)){
+ console.log("you got it buddy")   
+cornify_add();
+}    
+}
+    window.addEventListener("keyup",konami);
+
+</script>
+</body>
+</html>

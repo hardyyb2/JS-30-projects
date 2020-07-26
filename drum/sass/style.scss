@@ -1,0 +1,37 @@
+@mixin display{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.margins{
+    margin:0;
+    padding:0;
+}
+$font:sans-serif;
+
+body{
+    background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+    background-size: cover;
+  
+    @include display();
+    @extend .margins;
+    text-transform: uppercase;
+    font-family: $font;
+    font-size: 2em;
+    color:white;
+  }
+div[class="container"]{
+    @include display;
+    div{
+        padding:10px;
+        margin:20px;
+        border:1px solid white;
+        
+    }    
+}
+.playing{
+    transform:scale(1.1);
+    bordeR:2px solid yellow;
+    box-shadow: 2px 2px 2px 2px yellow,2px 2px 6px 2px yellow,2px 2px 12px 2px yellow,;
+    transition:0.08s;
+}
